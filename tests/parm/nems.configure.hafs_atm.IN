@@ -1,0 +1,18 @@
+ logKindFlag:            ESMF_LOGKIND_MULTI
+
+ EARTH_component_list: ATM
+
+ ATM_model:            @[atm_model]
+ ATM_petlist_bounds:   @[atm_petlist_bounds]
+ ATM_attributes::
+ ::
+
+ runSeq::
+   ATM
+ ::
+
+ DRIVER_attributes::
+ ::
+
+ ALLCOMP_attributes::
+ ::
