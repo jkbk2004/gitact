@@ -1,5 +1,5 @@
 [submodule "FV3"]
-  path = FV3
-  url = https://github.com/NOAA-EMC/fv3atm
+	path = FV3
+	url = https://github.com/NOAA-EMC/fv3atm
   branch = develop
 
