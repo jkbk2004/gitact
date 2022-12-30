@@ -13,8 +13,8 @@ result() {
 }
 
 # Declare variables
-declare -A base fv3 mom6 cice ww3 stoch gocart cmeps cdeps hycom cmake
-submodules="fv3 mom6 cice ww3 stoch gocart cmeps cdeps hycom cmake"
+declare -A base fv3
+submodules="fv3"
 comment=''
 ownerID=$1
 
@@ -26,42 +26,6 @@ base[branch]='develop'
 fv3[repo]='https://github.com/NOAA-EMC/fv3atm'
 fv3[branch]='develop'
 fv3[dir]='FV3'
-
-mom6[repo]='https://github.com/NOAA-EMC/MOM6'
-mom6[branch]='dev/emc'
-mom6[dir]='MOM6-interface/MOM6'
-
-cice[repo]='https://github.com/NOAA-EMC/CICE'
-cice[branch]='emc/develop'
-cice[dir]='CICE-interface/CICE'
-
-ww3[repo]='https://github.com/NOAA-EMC/WW3'
-ww3[branch]='dev/ufs-weather-model'
-ww3[dir]='WW3'
-
-stoch[repo]='https://github.com/noaa-psd/stochastic_physics'
-stoch[branch]='master'
-stoch[dir]='stochastic_physics'
-
-gocart[repo]='https://github.com/GEOS-ESM/GOCART'
-gocart[branch]='develop'
-gocart[dir]='GOCART'
-
-cmeps[repo]='https://github.com/NOAA-EMC/CMEPS'
-cmeps[branch]='emc/develop'
-cmeps[dir]='CMEPS-interface/CMEPS'
-
-cdeps[repo]='https://github.com/NOAA-EMC/CDEPS'
-cdeps[branch]='develop'
-cdeps[dir]='CDEPS-interface/CDEPS'
-
-hycom[repo]='https://github.com/NOAA-EMC/HYCOM-src'
-hycom[branch]='emc/develop'
-hycom[dir]='HYCOM-interface/HYCOM'
-
-cmake[repo]='https://github.com/NOAA-EMC/CMakeModules'
-cmake[branch]='develop'
-cmake[dir]='CMakeModules'
 
 # Get sha-1's of the top of develop of ufs-weather-model
 app="Accept: application/vnd.github.v3+json"
