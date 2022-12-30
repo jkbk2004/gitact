@@ -28,13 +28,13 @@ fv3[branch]='develop'
 fv3[dir]='FV3'
 
 # Get sha-1's of the top of develop of ufs-weather-model
-app="Accept: application/vnd.github.v3+json"
-url="https://api.github.com/repos/ufs-community/ufs-weather-model/branches/develop"
-base[sha]=$(curl -sS -H "$app" $url | jq -r '.commit.sha')
-for submodule in $submodules; do
-  eval url=https://api.github.com/repos/ufs-community/ufs-weather-model/contents/'${'$submodule'[dir]}'
-  eval $submodule'[sha]=$(curl -sS -H "$app" $url | jq -r '.sha')'
-done
+#app="Accept: application/vnd.github.v3+json"
+#url="https://api.github.com/repos/ufs-community/ufs-weather-model/branches/develop"
+#base[sha]=$(curl -sS -H "$app" $url | jq -r '.commit.sha')
+#for submodule in $submodules; do
+#  eval url=https://api.github.com/repos/ufs-community/ufs-weather-model/contents/'${'$submodule'[dir]}'
+#  eval $submodule'[sha]=$(curl -sS -H "$app" $url | jq -r '.sha')'
+#done
 
 # Check if the head branch is up to date with the base branch
 cd ${GITHUB_WORKSPACE}
